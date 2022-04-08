@@ -16,6 +16,7 @@ const apiMoviesRoutes = require('./routes/api/moviesRouter')
 app.set('views', path.resolve(__dirname, './views'));
 app.set('view engine', 'ejs');
 
+app.use(express.json())
 app.use(express.static(path.resolve(__dirname, '../public')));
 
 //URL encode  - Para que nos pueda llegar la información desde el formulario al req.body
